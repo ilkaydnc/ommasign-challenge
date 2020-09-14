@@ -1,8 +1,10 @@
-const PARTICLES = [];
-
-// Get numbers from 50 to 100 that are multiples of 10
-const getRandomMutlipleOf10 = () => {
-  return Math.max(50, Math.min(100, getRandom(10, 5) * 10));
+/**
+ *
+ * @param {number} max
+ * @param {number} min
+ */
+export const getRandomMultipleOf10 = (max, min = 0) => {
+  return getRandom(max, min) * 10;
 };
 
 // Get random numbers
