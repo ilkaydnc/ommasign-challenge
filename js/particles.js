@@ -10,3 +10,31 @@ const getRandom = (last, first = 0) => {
   return Math.floor(Math.random() * last) + first;
 };
 
+const createParticles = (count) => {
+  for (let i = 0; i < count; i++) {
+    const newImg = document.createElement("img");
+
+    newImg.src = `./assets/particles/${getRandom(7)}.png`;
+
+    // Add random width
+    newImg.style.width = `${getRandomMutlipleOf10()}px`;
+
+    // Add random animation with class name
+    newImg.classList = `rotate-${getRandom(2) ? "left" : "right"}`;
+
+    PARTICLES.push(newImg);
+    console.log(getRandomMutlipleOf10());
+  }
+};
+
+const appendParticles = () => {
+  createParticles(200);
+
+  const parent = document.querySelector(".particles");
+
+  PARTICLES.forEach((item) => {
+    parent.appendChild(item);
+  });
+};
+
+appendParticles();
