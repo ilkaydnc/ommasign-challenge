@@ -35,6 +35,16 @@ const appendParticles = () => {
   PARTICLES.forEach((item) => {
     parent.appendChild(item);
   });
+const generateLocation = (topLeft, bottomRight) => {
+  if (topLeft && bottomRight) {
+    const x = getRandom(bottomRight[0], topLeft[0]);
+    const y = getRandom(bottomRight[1], topLeft[1]);
+    return { x, y };
+  } else {
+    const x = getRandom(window.innerWidth);
+    const y = getRandom(window.innerHeight);
+    return { x, y };
+  }
 };
 
 appendParticles();
