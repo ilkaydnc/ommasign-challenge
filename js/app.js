@@ -4,6 +4,12 @@ import {
   generateLocation,
 } from "./particles.js";
 
+const plateDurations = {
+  starting: 2000,
+  start: 5000,
+  ending: 1000,
+};
+
 createParticles(50);
 
 setTimeout(() => {
@@ -68,3 +74,4 @@ const animate = (name, id, durations, delay = 0) => {
   }, delay);
 };
 
+animate("plate", "plate", plateDurations);

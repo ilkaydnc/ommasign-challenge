@@ -31,3 +31,22 @@
     transform: rotate(-360deg);
   }
 }
+
+/* --- */
+
+.plate-starting {
+  transform: scale(1.2) rotate(360deg) !important;
+}
+
+.plate-start {
+  transform: scale(0.8) rotate(370deg) !important;
+}
+
+.plate-ending {
+  transform: scale(0.4) rotate(-180deg) !important;
+}
+
+.plate-end {
+  transform: scale(0.4) rotate(-180deg) !important;
+}
+
