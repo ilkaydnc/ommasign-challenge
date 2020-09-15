@@ -7,9 +7,13 @@ export const getRandomMultipleOf10 = (max, min = 0) => {
   return getRandom(max, min) * 10;
 };
 
-// Get random numbers
-const getRandom = (last, first = 0) => {
-  return Math.floor(Math.random() * last) + first;
+/**
+ *
+ * @param {number} max
+ * @param {number} min
+ */
+export const getRandom = (max, min = 0) => {
+  return Math.floor(Math.random() * (max - min) + min);
 };
 
 const createParticles = (count) => {
