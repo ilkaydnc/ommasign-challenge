@@ -6,6 +6,9 @@
 html,
 body {
   overflow: hidden;
+  background-size: 400px;
+  background-image: url(../assets/bg-pattern.png);
+  font-family: "Sedgwick Ave", cursive;
 }
 
 #app {
