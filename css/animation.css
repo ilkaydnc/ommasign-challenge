@@ -15,6 +15,8 @@
   }
 }
 
+/* --- */
+
 .rotate-right {
   animation-name: rotateRight;
   animation-duration: 10000ms;
@@ -47,6 +49,24 @@
 }
 
 .plate-end {
+  transform: scale(0.4) rotate(-180deg) !important;
+}
+
+/* --- */
+
+.app-starting {
+  transform: scale(0.8) rotate(-30deg) !important;
+}
+
+.app-start {
+  transform: scale(1) rotate(-40deg) !important;
+}
+
+.app-ending {
+  transform: scale(0.4) rotate(-60deg) !important;
+}
+
+.app-end {
   transform: scale(0.4) rotate(-180deg) !important;
 }
 
