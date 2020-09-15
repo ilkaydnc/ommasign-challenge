@@ -16,6 +16,12 @@ const appDurations = {
   ending: 1000,
 };
 
+const infoDurations = {
+  starting: 1500,
+  start: 100,
+  ending: 5500,
+};
+
 createParticles(50);
 
 setTimeout(() => {
@@ -82,3 +88,4 @@ const animate = (name, id, durations, delay = 0) => {
 
 animate("plate", "plate", plateDurations);
 animate("app", "app", appDurations);
+animate("info", "info", infoDurations);

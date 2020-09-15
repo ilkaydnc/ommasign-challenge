@@ -44,3 +44,43 @@ body {
   margin: -300px;
 }
 
+#info {
+  position: absolute;
+  top: 100%;
+  left: -40%;
+  width: 700px;
+  margin: -350px;
+  background-image: url("../assets/brushstroke.png");
+  transform: scaleY(0) rotate(30deg);
+  transition: width 1s;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 200px;
+  padding-right: 100px;
+  background-image: url("../assets/brushstroke.png");
+  background-clip: unset;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 700px 200px;
+}
+
+.price-container h1 {
+  font-size: 64px;
+  font-weight: 400;
+  margin-left: 120px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.price-container span {
+  display: block;
+  color: white;
+  font-weight: 700;
+  font-size: 32px;
+}

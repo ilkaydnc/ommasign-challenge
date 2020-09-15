@@ -70,3 +70,20 @@
   transform: scale(0.4) rotate(-180deg) !important;
 }
 
+/* --- */
+
+.info-starting {
+  transform: scaleY(0) rotate(30deg) !important;
+}
+
+.info-start {
+  transform: scaleY(1) rotate(30deg) !important;
+}
+
+.info-ending {
+  transform: scaleY(1) rotate(30deg) !important;
+}
+
+.info-end {
+  transform: rotate(0) !important;
+}
