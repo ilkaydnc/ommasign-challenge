@@ -29,9 +29,10 @@ export const createParticles = (count) => {
     img.src = `./assets/particles/${getRandom(7)}.png`;
 
     const styles = {
-      width: getRandomMultipleOf10(4, 15) + "px",
-      top: generateLocation([800, 400], [1000, 600]).y + "px",
-      left: generateLocation([800, 400], [1000, 600]).x + "px",
+      width: getRandomMultipleOf10(20, 4) + "px",
+      top: generateLocation([900, 400], [950, 450]).y + "px",
+      left: generateLocation([900, 400], [950, 450]).x + "px",
+      transition: `all ${getRandom(8, 3) * 1000}ms`,
     };
 
     // Add styles to element
