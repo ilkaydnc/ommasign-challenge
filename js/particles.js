@@ -16,31 +16,40 @@ export const getRandom = (max, min = 0) => {
   return Math.floor(Math.random() * (max - min) + min);
 };
 
-const createParticles = (count) => {
+/**
+ *
+ * @param {number} count
+ */
+export const createParticles = (count) => {
+  const parent = document.querySelector(".particles");
+
   for (let i = 0; i < count; i++) {
-    const newImg = document.createElement("img");
+    const img = document.createElement("img");
 
-    newImg.src = `./assets/particles/${getRandom(7)}.png`;
+    img.src = `./assets/particles/${getRandom(7)}.png`;
 
-    // Add random width
-    newImg.style.width = `${getRandomMutlipleOf10()}px`;
+    const styles = {
+      width: getRandomMultipleOf10(4, 15) + "px",
+      top: generateLocation([800, 400], [1000, 600]).y + "px",
+      left: generateLocation([800, 400], [1000, 600]).x + "px",
+    };
+
+    // Add styles to element
+    Object.assign(img.style, styles);
 
     // Add random animation with class name
-    newImg.classList = `rotate-${getRandom(2) ? "left" : "right"}`;
+    img.classList = `particle rotate-${getRandom(2) ? "left" : "right"}`;
 
-    PARTICLES.push(newImg);
-    console.log(getRandomMutlipleOf10());
+    parent.appendChild(img);
   }
 };
 
-const appendParticles = () => {
-  createParticles(200);
+/**
+ *
+ * @param {[x: number, y: number]} topLeft
+ * @param {[x: number, y: number]} bottomRight
+ */
 
-  const parent = document.querySelector(".particles");
-
-  PARTICLES.forEach((item) => {
-    parent.appendChild(item);
-  });
 const generateLocation = (topLeft, bottomRight) => {
   if (topLeft && bottomRight) {
     const x = getRandom(bottomRight[0], topLeft[0]);
@@ -52,5 +61,3 @@ const generateLocation = (topLeft, bottomRight) => {
     return { x, y };
   }
 };
-
-appendParticles();
