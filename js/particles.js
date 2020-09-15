@@ -50,7 +50,7 @@ export const createParticles = (count) => {
  * @param {[x: number, y: number]} bottomRight
  */
 
-const generateLocation = (topLeft, bottomRight) => {
+export const generateLocation = (topLeft, bottomRight) => {
   if (topLeft && bottomRight) {
     const x = getRandom(bottomRight[0], topLeft[0]);
     const y = getRandom(bottomRight[1], topLeft[1]);
