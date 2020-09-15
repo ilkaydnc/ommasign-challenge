@@ -58,7 +58,10 @@ export const generateLocation = (topLeft, bottomRight) => {
     return { x, y };
   } else {
     const x = getRandom(window.innerWidth);
-    const y = getRandom(window.innerHeight);
+    const y = getRandom(
+      window.innerWidth - (window.innerWidth - window.innerHeight) / 2,
+      (-window.innerWidth + window.innerHeight) / 2
+    );
     return { x, y };
   }
 };
