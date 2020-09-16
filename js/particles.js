@@ -30,8 +30,8 @@ export const createParticles = (count) => {
 
     const styles = {
       width: getRandomMultipleOf10(20, 4) + "px",
-      top: generateLocation([900, 400], [950, 450]).y + "px",
-      left: generateLocation([900, 400], [950, 450]).x + "px",
+      top: generateLocation([800, 350], [850, 400]).y + "px",
+      left: generateLocation([800, 350], [850, 400]).x + "px",
       transition: `all ${getRandom(8, 3) * 1000}ms`,
     };
 
