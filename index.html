@@ -26,9 +26,22 @@
     </div>
     <script type="module" src="./js/app.js"></script>
     <script type="module">
+      import { startAnimations, changeFood, getNextFood } from "./js/app.js";
       import { createParticles } from "./js/particles.js";
       import config from "../config.js";
 
       createParticles(config.particles);
+
+      let CURRENT = undefined;
+      CURRENT = getNextFood(config.menu, CURRENT);
+      startAnimations();
+      changeFood(CURRENT);
+
+      const boardLoop = setInterval(() => {
+        CURRENT = getNextFood(config.menu, CURRENT);
+        startAnimations();
+        changeFood(CURRENT);
+      }, 8 * 1000);
+    </script>
   </body>
 </html>
