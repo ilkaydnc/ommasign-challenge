@@ -105,3 +105,17 @@ export const changeFood = (food) => {
   price.innerHTML = "PRICE: " + food.price;
 };
 
+/**
+ *
+ * @param {[{ title: string, img: string, price: string }]} menu Array of food objects
+ * @param {{ title: string, img: string, price: string }} current Current food object
+ */
+export const getNextFood = (menu, current) => {
+  if (!current) return menu[0];
+
+  const index = menu.indexOf(current);
+
+  if (index === menu.length - 1) return menu[0];
+
+  return menu[index + 1];
+};
