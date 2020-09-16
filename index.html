@@ -25,5 +25,10 @@
       </div>
     </div>
     <script type="module" src="./js/app.js"></script>
+    <script type="module">
+      import { createParticles } from "./js/particles.js";
+      import config from "../config.js";
+
+      createParticles(config.particles);
   </body>
 </html>

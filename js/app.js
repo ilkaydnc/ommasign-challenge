@@ -22,8 +22,6 @@ const infoDurations = {
   ending: 5000,
 };
 
-createParticles(50);
-
 const animateParticles = () => {
   setTimeout(() => {
     const particles = document.querySelectorAll(".particle");
