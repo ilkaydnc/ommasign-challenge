@@ -87,6 +87,10 @@ const animate = (name, id, durations, delay = 0) => {
   }, delay);
 };
 
-animate("plate", "plate", plateDurations);
-animate("app", "app", appDurations);
-animate("info", "info", infoDurations);
+export const startAnimations = () => {
+  animateParticles();
+  animate("plate", "plate", plateDurations);
+  animate("app", "app", appDurations);
+  animate("info", "info", infoDurations);
+};
+
