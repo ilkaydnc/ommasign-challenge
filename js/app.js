@@ -56,7 +56,7 @@ const animateParticles = () => {
  * @param {*} delay
  */
 const animate = (name, id, durations, delay = 0) => {
-  if (!durations) return null;
+  if (!durations && !name && !id) return null;
   const { starting, start, ending } = durations;
   const item = document.querySelector(`#${id}`);
 
