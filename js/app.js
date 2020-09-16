@@ -61,8 +61,8 @@ const animate = (name, id, durations, delay = 0) => {
   const item = document.querySelector(`#${id}`);
 
   setTimeout(() => {
-    item.classList.add([`${name}-starting`]);
     item.style.transition = `all ${starting}ms`;
+    item.classList.add([`${name}-starting`]);
 
     setTimeout(() => {
       item.style.transition = `all ${start}ms linear`;
@@ -77,6 +77,7 @@ const animate = (name, id, durations, delay = 0) => {
         setTimeout(() => {
           item.classList.remove([`${name}-ending`]);
           item.style.transition = "";
+          item.style.transition = `all ${starting}ms`;
         }, ending);
       }, start);
     }, starting);
