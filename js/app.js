@@ -91,3 +91,17 @@ export const startAnimations = () => {
   animate("info", "info", infoDurations);
 };
 
+/**
+ *
+ * @param {{ title: string, img: string, price: string }} food
+ */
+export const changeFood = (food) => {
+  const plate = document.querySelector("#food");
+  const title = document.querySelector("#title");
+  const price = document.querySelector("#price");
+
+  plate.src = food.img;
+  title.innerHTML = food.title;
+  price.innerHTML = "PRICE: " + food.price;
+};
+
