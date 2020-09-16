@@ -45,11 +45,11 @@
 }
 
 .plate-ending {
-  transform: scale(0.4) rotate(-180deg) !important;
+  transform: scale(0.6) rotate(-180deg) !important;
 }
 
 .plate-end {
-  transform: scale(0.4) rotate(-180deg) !important;
+  transform: scale(0) rotate(-180deg) !important;
 }
 
 /* --- */
@@ -73,17 +73,17 @@
 /* --- */
 
 .info-starting {
-  transform: scaleY(0) rotate(30deg) !important;
+  transform: scale(0) rotate(30deg) !important;
 }
 
 .info-start {
-  transform: scaleY(1) rotate(30deg) !important;
+  transform: scale(1) rotate(30deg) !important;
 }
 
 .info-ending {
-  transform: scaleY(1) rotate(30deg) !important;
+  transform: scale(1) rotate(30deg) !important;
 }
 
 .info-end {
-  transform: rotate(0) !important;
+  transform: scale(1) rotate(0) !important;
 }

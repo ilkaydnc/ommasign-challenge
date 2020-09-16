@@ -18,8 +18,8 @@ const appDurations = {
 
 const infoDurations = {
   starting: 1500,
-  start: 100,
-  ending: 5500,
+  start: 300,
+  ending: 5000,
 };
 
 createParticles(50);

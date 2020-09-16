@@ -51,7 +51,7 @@ body {
   width: 700px;
   margin: -350px;
   background-image: url("../assets/brushstroke.png");
-  transform: scaleY(0) rotate(30deg);
+  transform: scale(0) rotate(30deg);
   transition: width 1s;
 }
 
